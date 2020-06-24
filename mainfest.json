@@ -1,0 +1,27 @@
+{
+  "name": "Beat Sage",
+  "description" : "[Unofficial] Beat Sage Extension for downloading from Youtube",
+  "version": "0.0",
+  "browser_action": {
+    "default_popup": "sample.html"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*.youtube.com/*"],
+      "js": ["youtube.js"]
+    }
+  ],
+  "manifest_version": 2,
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens hello.html"
+    }
+  }
+}
